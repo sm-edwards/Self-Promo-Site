@@ -1,0 +1,37 @@
+[
+    {
+        "image" : "1.JPG",
+        "thumb" : "1_thumb.jpg",
+        "caption" : "My best friends"
+    },{
+        "image" : "2.JPG",
+        "thumb" : "2_thumb.jpg",
+        "caption" : "Me again sorry"
+    },{
+        "image" : "3.PNG",
+        "thumb" : "3_thumb.png",
+        "caption" : "My friend Amelia and I at work"
+    },{
+        "image" : "4.jpg",
+        "thumb" : "4_thumb.jpg",
+        "caption" : "My beautiful family"
+    },{
+        "image" : "5.JPG",
+        "thumb" : "5_thumb.jpg",
+        "caption" : "I've met so many people through my organization"
+    },{
+        "image" : "6.JPG",
+        "thumb" : "6_thumb.jpg",
+        "caption" : "I love to travel with friends"
+    },{
+        "image" : "7.JPG",
+        "thumb" : "7_thumb.jpg",
+        "caption" : "I love to wine"
+    },{
+        "image" : "8.JPG",
+        "thumb" : "8_thumb.jpg",
+        "caption" : "I pledged my fraternity in the Fall of 2018"
+    }
+    
+    
+]

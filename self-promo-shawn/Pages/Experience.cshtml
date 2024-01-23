@@ -1,0 +1,95 @@
+﻿@page
+@model ExperienceModel
+@{
+    ViewData["Title"] = "Experience";
+}
+
+    <h3>Professional Experience</h3>
+    @foreach (var exp in Model.ProfessionalExperiences)
+    {
+      <h4>@exp.Company</h4>
+      string startdate_ = String.Format("{0:d/M/yyyy}", exp.StartDate);
+      string enddate_ = String.Format("{0:d/M/yyyy}", exp.EndDate);
+      enddate_ = String.IsNullOrEmpty(enddate_) ? "Present" : enddate_;
+      <div class = "dates">@startdate_ - @enddate_</div>
+      <div class = "title">@exp.JobTitle</div>
+      <div class = "description">@exp.Description</div>
+      @if(exp.Responsibilities != null)
+      {
+      <div class="responsibilities">
+      <ul>
+      @foreach (var res in exp.Responsibilities)
+      {
+        
+          <li>@res.Value</li>
+        
+      }
+      </ul>
+      </div>
+      }
+    }
+
+    <h3>Activities</h3>
+    @foreach (var exp in Model.Activities)
+    {
+      <h4>@exp.Company</h4>
+      string startdate_ = String.Format("{0:d/M/yyyy}", exp.StartDate);
+      string enddate_ = String.Format("{0:d/M/yyyy}", exp.EndDate);
+      enddate_ = String.IsNullOrEmpty(enddate_) ? "Present" : enddate_;
+      <div class = "dates">@startdate_ - @enddate_</div>
+      <div class = "title">@exp.JobTitle</div>
+      <div class = "description">@exp.Description</div>
+      @if(exp.Responsibilities != null)
+      {
+      <div class="responsibilities">
+      <ul>
+      @foreach (var res in exp.Responsibilities)
+      {
+        
+          <li>@res.Value</li>
+        
+      }
+      </ul>
+      </div>
+      }
+    }
+    <!-- <div class="experience">
+      <h4>Northpointe Hospitality</h4>
+      <div class="dates">August 2022 - Present</div>
+      <div class="title">Bartender</div>
+      <div class="description">
+        Serve beverages to guests and take care of rooftop and parlor bars of
+         the Crowne Plaza North Augusta hotel.
+      </div>
+      <div class="responsibilities">
+        <ul>
+          <li>Greet guests with professional and courteous demeanor</li>
+          <li>Serve guests various craft cocktails and prepacked beverages</li>
+          <li>Verify age requirements of guests before service</li>
+          <li>Manage inventory and restock liquor, wine, and beer</li>
+          <li>Keep environment, tools, and self clean before, during and after shift</li>
+          <li><b>Recieved employee of the quarter [Quarter 4, 2023]</b></li>
+        </ul>
+      </div>
+      </div>
+    <h3>Activities</h3>
+    <div class="experience">
+      <h4>Interfraternity Council</h4>
+      <div class="dates">2019 - 2021</div>
+      <div class="title">Director of Information & Recruitment</div>
+      <div class="description">IFC is the governing body over male greek organizations on college
+      campuses
+      </div>
+      <div class="responsibilities">
+        <ul>
+          <li>Keep prospective and existiing members up-to-date on events via multiple
+          social media platforms</li>
+          <li>Foster relationships with prospective members</li>
+          <li>Organize IFC recruitment events</li>
+          <li>Liase with school officials and forward logistics of upcoming events</li>
+          <li>Maintain database of prospective and existing members</li>
+        </ul>
+      </div>
+      
+      </div>-->
+      

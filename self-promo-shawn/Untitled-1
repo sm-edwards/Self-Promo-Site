@@ -1,0 +1,5 @@
+-- database: /workspaces/self-promo-3-sm-edwards/self-promo-shawn/self-promo-shawn.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+SELECT * FROM "Experiences" ORDER BY StartDate ASC;

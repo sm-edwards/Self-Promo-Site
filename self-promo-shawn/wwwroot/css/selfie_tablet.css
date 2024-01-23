@@ -1,0 +1,13 @@
+/* COLOR SCHEME: Cherry Cheesecake */
+header, section, footer, aside, nav, main, article, figure {
+display: block;
+}
+
+body{
+  margin: 5px;
+}
+
+#wrapper{
+  width: 100%;
+  margin: 0;
+}

@@ -1,0 +1,44 @@
+@page
+@model self_promo_shawn.Pages.Admin.Responsibilities.IndexModel
+
+@{
+    ViewData["Title"] = "Responsibilites";
+}
+
+<h1>Responsibilities</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Responsibility[0].Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Responsibility[0].Experience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Responsibility[0].SequenceNumber)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Responsibility) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experience.Company)
+            </td>   
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ResponsibilityId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ResponsibilityId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ResponsibilityId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

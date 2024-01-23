@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<head>
+  <meta charset="utf-8" />
+  <title>Shawn Edwards - @ViewData["Title"]</title>
+  <link rel="stylesheet" href="~/css/selfie.css">
+  <link rel="stylesheet" href="~/css/selfie_tablet.css"
+  media="only screen and (max-width: 1000px)">
+  <link rel="stylesheet" href="~/css/selfie_mobile.css"
+  media="only screen and (max-width: 600px)">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="~/lib/jquery/dist/jquery.min.js"></script> 
+  @RenderSection("Head", false)
+</head>
+<body>
+  <div id="wrapper">
+  <header>
+    <h1>Shawn Edwards</h1>
+    <h2>@ViewData["Title"]</h2>
+  </header>
+  <nav>
+    <ul>
+      <li><a href = "~/Index">Home</a></li>
+      <li><a href = "~/Education">Education</a></li>
+      <li><a href = "~/Experience">Experience</a></li>
+      <li><a href = "~/Gallery">Gallery</a></li>
+      <li><a href = "~/Contact">Contact</a></li>
+      @if (SignInManager.IsSignedIn(User)){
+      <li><a href = "~/Admin/Index">Admin</a></li>
+      }
+      <partial name="_LoginPartial" />
+    </ul>   
+  </nav>
+  <main>
+    @RenderBody()
+  </main>
+   <footer>
+    Copyright &copy; 2023, Shawn Edwards<br>
+    <b>Email: </b> <a href = "mailto:shaedwards@augusta.edu" target = "_blank"><u>shaedwards@augusta.edu</u></a><br>
+    <b>Profile: </b> <a href = "https://linkedin.com/in/shawn-edwards-b45166212" target = "_blank"><u>LinkedIn</u></a><br>
+  </footer>
+
+  </div>
+  @RenderSection("Scripts", false)
+</body>
+</html>
